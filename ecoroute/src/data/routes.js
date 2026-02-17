@@ -1,0 +1,82 @@
+export const routesData = [
+    {
+        id: 1,
+        badge: "greenest",
+        badgeColor: "bg-green-100 text-green-700",
+        modes: ["🚶", "🛺", "🚌", "🛴"],
+        time: "42 min",
+        cost: "₹38",
+        co2: "0.4 kg CO₂",
+        analogy: "= 107 phone charges",
+        safe: true,
+        crowding: "moderate",
+        steps: [
+            { icon: "🚶", desc: "Walk to Silk Board Bus Stop", duration: "5 min", cost: "Free" },
+            { icon: "🛺", desc: "Shared Auto to BTM Layout", duration: "8 min", cost: "₹15", community: true },
+            { icon: "🚌", desc: "Bus 500C to Marathahalli", duration: "18 min", cost: "₹12", crowding: "moderate" },
+            { icon: "🛴", desc: "Yulu Scooter to Whitefield", duration: "8 min", cost: "₹11" },
+        ],
+        nudges: {
+            lossFrame: "Cabbing daily costs ₹8,400 more per year",
+            lossFrameHI: "रोज़ कैब लेने से साल में ₹8,400 ज़्यादा खर्च",
+            co2Story: "Impact like not charging 107 phones",
+            co2StoryHI: "107 फोन चार्ज ना करने के बराबर",
+            socialProof: "31 commuters took this in the last hour",
+            socialProofHI: "पिछले घंटे में 31 यात्रियों ने यह लिया",
+            whatIf: "+4 min · ₹8 · ↓0.1kg CO₂",
+            whatIfHI: "+4 मिनट · ₹8 · ↓0.1kg CO₂",
+        }
+    },
+    {
+        id: 2,
+        badge: "fastest",
+        badgeColor: "bg-blue-100 text-blue-700",
+        modes: ["🚌", "🚇"],
+        time: "31 min",
+        cost: "₹55",
+        co2: "0.9 kg CO₂",
+        analogy: "= 3 plastic bags of waste",
+        safe: false,
+        crowding: "high",
+        steps: [
+            { icon: "🚌", desc: "Bus to Indiranagar Metro", duration: "12 min", cost: "₹15" },
+            { icon: "🚇", desc: "Metro to Whitefield", duration: "19 min", cost: "₹40", crowding: "high" },
+        ],
+        nudges: {
+            lossFrame: "This route costs ₹17 more than cheapest",
+            lossFrameHI: "यह रास्ता सबसे सस्ते से ₹17 महंगा है",
+            co2Story: "2x more carbon than greenest option",
+            co2StoryHI: "सबसे हरे विकल्प से 2x अधिक कार्बन",
+            socialProof: "High crowding predicted on metro",
+            socialProofHI: "मेट्रो में अधिक भीड़ की संभावना",
+            whatIf: "-5 min · ₹12 · ↑0.2kg CO₂",
+            whatIfHI: "-5 मिनट · ₹12 · ↑0.2kg CO₂",
+        }
+    },
+    {
+        id: 3,
+        badge: "cheapest",
+        badgeColor: "bg-yellow-100 text-yellow-700",
+        modes: ["🚶", "🚌"],
+        time: "56 min",
+        cost: "₹18",
+        co2: "0.6 kg CO₂",
+        analogy: "= 45 phone charges",
+        safe: true,
+        crowding: "low",
+        steps: [
+            { icon: "🚶", desc: "Walk to BTM Bus Stop", duration: "12 min", cost: "Free" },
+            { icon: "🚌", desc: "Bus 500C to Whitefield", duration: "44 min", cost: "₹18", crowding: "low" },
+        ],
+        nudges: {
+            lossFrame: "Save ₹20 compared to fastest route",
+            lossFrameHI: "सबसे तेज़ रास्ते की तुलना में ₹20 बचाएं",
+            co2Story: "Only 0.2kg more CO₂ than greenest",
+            co2StoryHI: "सबसे हरे से केवल 0.2kg अधिक CO₂",
+            socialProof: "Low crowding - comfortable journey",
+            socialProofHI: "कम भीड़ - आरामदायक यात्रा",
+            whatIf: "-14 min · ₹20 · ↓0.2kg CO₂",
+            whatIfHI: "-14 मिनट · ₹20 · ↓0.2kg CO₂",
+        }
+    }
+];

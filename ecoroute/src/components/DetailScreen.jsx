@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import BottomNav from './BottomNav';
+import BottomNav from './shared/BottomNav';
 import { DELAY_PREDICTIONS, getTimeSlot, BOOKING_OPTIONS } from '../data/appData';
 import BookingModal from './BookingModal';
 
@@ -311,7 +311,7 @@ export default function DetailScreen({
                 </div>
             </div>
 
-            <BottomNav screen="detail" setScreen={setScreen} lang={lang} T={T} />
+            <BottomNav currentScreen="detail" setScreen={setScreen} />
 
             {/* Booking Modal */}
             {bookingScreen && (

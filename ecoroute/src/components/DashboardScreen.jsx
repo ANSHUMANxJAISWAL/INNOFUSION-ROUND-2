@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import BottomNav from './BottomNav';
+import BottomNav from './shared/BottomNav';
 
 export default function DashboardScreen({
     lang, setLang, persona, safeMode, setSafeMode, setScreen, T, bookings
@@ -244,7 +244,7 @@ export default function DashboardScreen({
                 </div>
             </div>
 
-            <BottomNav screen="dashboard" setScreen={setScreen} lang={lang} T={T} />
+            <BottomNav currentScreen="dashboard" setScreen={setScreen} />
         </div>
     );
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import BottomNav from './BottomNav';
+import BottomNav from './shared/BottomNav';
 import { routesData } from '../data/routes';
 import { DELAY_PREDICTIONS, getTimeSlot } from '../data/appData';
 
@@ -193,7 +193,7 @@ export default function ResultsScreen({
                 </div>
             </div>
 
-            <BottomNav screen="results" setScreen={setScreen} lang={lang} T={T} />
+            <BottomNav currentScreen="results" setScreen={setScreen} />
         </div>
     );
 }

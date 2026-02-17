@@ -69,9 +69,9 @@ export default function BookingModal({
             )}
 
             {/* Modal Overlay */}
-            <div className="fixed inset-0 bg-black bg-opacity-50 z-40 flex items-end">
+            <div className="fixed inset-0 left-1/2 -translate-x-1/2 w-full max-w-md bg-black bg-opacity-50 z-40 flex items-end">
                 {/* Modal Content */}
-                <div className="bg-background w-full max-w-md mx-auto rounded-t-3xl shadow-2xl animate-slide-up max-h-[90vh] overflow-y-auto">
+                <div className="bg-background w-full mx-auto rounded-t-3xl shadow-2xl animate-slide-up max-h-[90vh] overflow-y-auto">
                     {!confirmed ? (
                         // CONFIRMATION STATE
                         <div className="p-6">
@@ -127,16 +127,16 @@ export default function BookingModal({
                             {/* Availability */}
                             <div className="bg-white rounded-2xl shadow-sm p-6 mb-6">
                                 <p className={`text-sm font-semibold mb-2 ${bookingData.availability >= 3 ? 'text-green-700' :
-                                        bookingData.availability >= 1 ? 'text-yellow-700' :
-                                            'text-red-700'
+                                    bookingData.availability >= 1 ? 'text-yellow-700' :
+                                        'text-red-700'
                                     }`}>
                                     {bookingData.availability} {T[lang].availableNearby}
                                 </p>
                                 <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
                                     <div
                                         className={`h-full ${bookingData.availability >= 3 ? 'bg-green-500' :
-                                                bookingData.availability >= 1 ? 'bg-yellow-500' :
-                                                    'bg-red-500'
+                                            bookingData.availability >= 1 ? 'bg-yellow-500' :
+                                                'bg-red-500'
                                             }`}
                                         style={{ width: `${(bookingData.availability / 5) * 100}%` }}
                                     />

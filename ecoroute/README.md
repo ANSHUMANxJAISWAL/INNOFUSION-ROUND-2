@@ -70,6 +70,28 @@ ecoroute/
 
 ---
 
+---
+
+## 🔮 Future Roadmap: Scaling to Production
+
+To transition from this functional MVP to a city-scale production system, we intend to implement the following stack:
+
+### 1. Robust Backend (Node.js + Python)
+- **Node.js/Express**: As the primary API gateway to handle real-time user requests and booking orchestrations.
+- **Python/FastAPI**: For hosting real ML regression models that replace our current client-side simulations, providing more accurate, deep-learning-based delay forecasts.
+
+### 2. Specialized Databases
+- **PostgreSQL + PostGIS**: Our primary relational database. PostGIS is essential for high-performance spatial queries, allowing us to find the "nearest" dock or calculate geographic distances with extreme precision.
+- **Redis**: For high-speed caching of real-time GTFS-Realtime (live bus/metro) feeds to ensure sub-second response times for route searches.
+- **MongoDB**: To store unstructured community reports, user feedback, and diverse provider data in a flexible schema.
+
+### 3. Real-World API Integrations
+- **GTFS Feeds**: Integration with BMRCL (Metro) and BMTC (Bus) live feeds for literal real-time tracking.
+- **Payment Gateways**: Integration with Razorpay/Stripe for actual financial transactions during bookings.
+- **Identity Providers**: Firebase or Auth0 for secure user authentication and cross-device syncing.
+
+---
+
 ## 🏁 Getting Started
 
 ### 1. Installation

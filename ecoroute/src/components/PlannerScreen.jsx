@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import BottomNav from './BottomNav';
+import BottomNav from './shared/BottomNav';
 
 export default function PlannerScreen({
     lang, setLang, persona, safeMode, setSafeMode, setScreen, T,
@@ -128,8 +128,8 @@ export default function PlannerScreen({
                                 key={mode.id}
                                 onClick={() => toggleMode(mode.id)}
                                 className={`p-4 rounded-2xl border-2 transition-all ${selectedModes.includes(mode.id)
-                                        ? 'bg-accent border-accent text-white'
-                                        : 'bg-white border-gray-200 text-gray-700 hover:border-gray-300'
+                                    ? 'bg-accent border-accent text-white'
+                                    : 'bg-white border-gray-200 text-gray-700 hover:border-gray-300'
                                     }`}
                             >
                                 <div className="text-2xl mb-1">{mode.icon}</div>
@@ -168,7 +168,7 @@ export default function PlannerScreen({
                 </div>
             </div>
 
-            <BottomNav screen="planner" setScreen={setScreen} lang={lang} T={T} />
+            <BottomNav currentScreen="planner" setScreen={setScreen} />
         </div>
     );
 }
